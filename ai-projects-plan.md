@@ -48,6 +48,10 @@
 > **収益仮説**: 個人=OSS無償 → チーム/企業向け有償(SSO・監査ログ・リモート接続・共有ワークスペース)。
 > **進め方**: 原案1-8方式（動く最小＋差別化コアを先行実装。MVP稼働済 = server(Express+ws)+web(Vite+React)、DEMO/本番モード、継続run、セキュリティ標準装備）。
 > ※本体はローカル常駐デーモン（実CLI起動・worktree操作）。Vercelは**ブラウザ内デモ**（VITE_CORRAL_DEMO=1）でUI/UX確認用。
+> **外販ロードマップ（機能30提案・価格プラン）**: `corral/docs/productization.md`（GitHub: https://github.com/hiroshi57/corral/blob/main/docs/productization.md ）。
+> **最優先5**: ①通知(Chatwork) ②エージェントFinOps ③生産性ダッシュボード ④マルチテナント ⑤SSO/RBAC。
+> **フェーズ**: P1=SaaS土台(テナント/SSO/RBAC/監査ログ/課金) → P2=差別化(FinOps/ダッシュボード/Chatwork通知/インラインレビュー/PR自動化) → P3=エンプラ(クラウド実行/サンドボックス/オンプレVPC/ガードレール/マルチリポ)。
+> **差別化の核**: 日本語ファースト＋国内コンプラ＋Chatwork / セキュリティ標準装備 / エージェントFinOps / 全エージェント中立ハブ。
 
 ## Vercel 本番デプロイ（2026-07-17・全12本 200 OK確認済み / レスポンシブ対応済み）
 
