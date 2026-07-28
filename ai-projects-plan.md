@@ -64,7 +64,14 @@
 >   サンドボックス=--network none・非root・資源制限/ssh リモート実行) / #19 自己ホスト(Dockerfile+
 >   docker-compose+docs/enterprise-deploy.md: データ主権/エアギャップ/本番チェックリスト)。
 >   検証: 危険プロンプト起動ブロック・repos取得・両ビルド。※docker/ssh 実走は要インフラ(コード/設定は本番同等)。
-> **次候補**: 課金(#26 Stripe) / インラインコメントレビュー(#6) / 監査ログSIEM連携 / SAML。
+> **進捗(2026-07-24, 大企業要件+ドキュメント起点)**:
+>   ・監査ログ+SIEM連携: 全操作を構造化記録→JSONL永続化＋SIEM Webhook転送(Splunk/Datadog/汎用)、
+>     /audit(owner/admin)・NDJSONエクスポート。guardrail/権限拒否も記録。
+>   ・SAML 2.0 SSO: @node-saml/node-saml で metadata/login/acs(Okta/Azure AD等・設定時)。
+>   ・**ドキュメントD&D→AIタスク分解→案件へ一括割り当て**: 提案書/議事録/マニュアル(txt/md/csv/json/docx)を
+>     ドロップ→タスク候補抽出→レビュー→現案件へ 1タスク=1ワーカー起動。案件をドキュメント起点でAI制御。
+>   デモ https://corral-tau.vercel.app に反映。
+> **次候補**: 課金(#26 Stripe) / インラインコメントレビュー(#6) / PDF取込 / LLMプランナー(ドキュメント分解の高精度化) / 監査改ざん検知。
 
 ## Vercel 本番デプロイ（2026-07-17・全12本 200 OK確認済み / レスポンシブ対応済み）
 
